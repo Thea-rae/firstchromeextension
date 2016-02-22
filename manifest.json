@@ -1,8 +1,11 @@
 {
-  "name": "Override Tab Hello World",
+  "name": "reg to vote yo",
   "manifest_version": 2,
   "version": "0.1",
   "chrome_url_overrides": {
     "newtab": "newtab.html"
+  },
+  "background":{
+    "scripts":["jquery.js", "main.js"]
   }
 }
