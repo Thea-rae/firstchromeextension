@@ -23,7 +23,12 @@
 				var diff = new Date( electionDates[i].date- today);
 				var name = electionDates[i].name;
 				var days = diff/1000/60/60/24;
-				
-				$('#content').append("<li>The "+name+" is "+days+" away!</li>");
+				if (days<=5){
+					$('#content').append("<li style='color:purple'>The "+name+" is "+days+" away!</li>");
+				} else if (days == 0){
+					$('#content').append("<li style='color:red'>The "+name+" is TODAY!</li>");
+				} else if (days >5){
+					$('#content').append("<li>The "+name+" is "+days+" away!</li>");
+				}
 			}
 		}

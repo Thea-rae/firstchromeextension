@@ -1,0 +1,17 @@
+body{
+	padding-top: 50px;
+	background: darkturquoise;
+	border-radius: 10px;
+}
+
+li{
+	list-style-type: none;
+	color:white;
+	margin-left: 10%;
+	padding-bottom: 10px;
+	font-family: "verdana";
+	font-size: 20px;
+	margin: 10px;
+	text-transform: capitalize;
+}
+
