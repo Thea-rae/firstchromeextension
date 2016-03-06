@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	initDate();
-	getData();
 });
 
 function initDate(){
@@ -37,18 +36,12 @@ function compareDates(today){
 	}
 }
 
-var votesmart = new VoteSmart();
-var query = {
-	"measureId": "1",
-	"zip5": "10003"
-};
+$.getJSON("https://www.googleapis.com/civicinfo/v2/elections?key=AIzaSyA9K6_Ncl1Q0JQRphIMj6089vMqrTy4o9A", getData);
 
-votesmart.BallotMeasure().measure(query, function (err, res) {
-	if (err) throw err;
-	else console.log(res);
-});
-
-votesmart.District().byZip(query, function (err, res) {
-  if (err) throw err;
-  else console.log(res);
-});
+//AIzaSyA9K6_Ncl1Q0JQRphIMj6089vMqrTy4o9A
+function getData (data) {
+	var politics = data;
+	for (var i in politics){
+		console.log(politics[i]);
+	}
+}
